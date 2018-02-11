@@ -74,9 +74,10 @@ LICENSE TYPES (At this moment):
  - License.APACHE
  - License.MIT
  - License.GNU
-
+ ```
+ 
+ ```java
 Library lib1 = new Library("Library name", "https://github.com/marcoscgdev", License.APACHE);
-
  ```
 
 If you don't want a dialog, you can use the Licenser class:
