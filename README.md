@@ -38,3 +38,43 @@ Now add the dependency to your app *build.gradle* file:
 ```groovy
 compile 'com.github.marcoscgdev:Licenser:1.0.0'
 ```
+
+#### Step: 2 - creating a dialog
+
+```java
+new LicenserDialog(this)
+        .setTitle("Licenses")
+        .setCancelable(true)
+        .setLibrary(new Library("Android Support Libraries",
+                "https://developer.android.com/topic/libraries/support-library/index.html",
+                License.APACHE))
+        .setLibrary(new Library("Example Library",
+                "https://github.com/marcoscgdev",
+                License.APACHE))
+        .setLibrary(new Library("Licenser",
+                "https://github.com/marcoscgdev/Licenser",
+                License.MIT))
+        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                // TODO: 11/02/2018
+            }
+        })
+        .show();
+```
+
+#### TIP
+If you don't want a dialog, you can use the Licenser class:
+
+```java
+Licenser licenser = new Licenser()
+        .setLibrary(new Library("Android Support Libraries",
+                "https://developer.android.com/topic/libraries/support-library/index.html",
+                License.APACHE))
+        .setLibrary(new Library("Example Library",
+                "https://github.com/marcoscgdev",
+                License.APACHE))
+        .setLibrary(new Library("Licenser",
+                "https://github.com/marcoscgdev/Licenser",
+                License.MIT));
+```
