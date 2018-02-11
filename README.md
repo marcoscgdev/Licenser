@@ -77,7 +77,7 @@ Licenser licenser = new Licenser()
                 License.MIT));
 ```
 
-#### Accesing data
+#### Custom functions
 
 ```java
 String licenses = licenser.getHTMLContent(); // Useful for showing it in a webview
