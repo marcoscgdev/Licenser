@@ -44,7 +44,6 @@ compile 'com.github.marcoscgdev:Licenser:1.0.0'
 ```java
 new LicenserDialog(this)
         .setTitle("Licenses")
-        .setCancelable(true)
         .setLibrary(new Library("Android Support Libraries",
                 "https://developer.android.com/topic/libraries/support-library/index.html",
                 License.APACHE))
