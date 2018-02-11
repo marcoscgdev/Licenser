@@ -62,7 +62,6 @@ new LicenserDialog(this)
         .show();
 ```
 
-#### TIP
 If you don't want a dialog, you can use the Licenser class:
 
 ```java
@@ -76,4 +75,13 @@ Licenser licenser = new Licenser()
         .setLibrary(new Library("Licenser",
                 "https://github.com/marcoscgdev/Licenser",
                 License.MIT));
+```
+
+#### Accesing data
+
+```java
+String licenses = licenser.getHTMLContent(); // Useful for showing it in a webview
+List<Library> apacheLibraries = licenser.getApacheLibraries();
+List<Library> mitLibraries = licenser.getMitLibraries();
+List<Library> gnuLibraries = licenser.getGnuLibraries();
 ```
