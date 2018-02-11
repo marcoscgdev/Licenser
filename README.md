@@ -70,9 +70,14 @@ Library lib1 = new Library(String title, String url, int licenseType);
 
 LICENSE TYPES (At this moment):
 
+```java
  - License.APACHE
  - License.MIT
  - License.GNU
+
+Library lib1 = new Library("Library name", "https://github.com/marcoscgdev", License.APACHE);
+
+ ```
 
 If you don't want a dialog, you can use the Licenser class:
 
