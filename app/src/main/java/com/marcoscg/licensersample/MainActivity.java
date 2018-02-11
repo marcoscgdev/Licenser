@@ -1,0 +1,88 @@
+package com.marcoscg.licensersample;
+
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+
+import com.marcoscg.licenser.Library;
+import com.marcoscg.licenser.License;
+import com.marcoscg.licenser.Licenser;
+import com.marcoscg.licenser.LicenserDialog;
+
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity {
+
+    private LicenserDialog licenserDialog;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        licenserDialog = new LicenserDialog(this)
+                .setTitle("Licenses")
+                .setCancelable(true)
+                .setLibrary(new Library("Android Support Libraries",
+                        "https://developer.android.com/topic/libraries/support-library/index.html",
+                        License.APACHE))
+                .setLibrary(new Library("Example Library",
+                        "https://github.com/marcoscgdev",
+                        License.APACHE))
+                .setLibrary(new Library("Licenser",
+                        "https://github.com/marcoscgdev/Licenser",
+                        License.MIT))
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        // TODO: 11/02/2018
+                    }
+                });
+
+        Licenser licenser = new Licenser()
+                .setLibrary(new Library("Android Support Libraries",
+                        "https://developer.android.com/topic/libraries/support-library/index.html",
+                        License.APACHE))
+                .setLibrary(new Library("Example Library",
+                        "https://github.com/marcoscgdev",
+                        License.APACHE))
+                .setLibrary(new Library("Licenser",
+                        "https://github.com/marcoscgdev/Licenser",
+                        License.MIT));
+
+        String licenses = licenser.getHTMLContent();
+        List<Library> apacheLibraries = licenser.getApacheLibraries();
+        List<Library> mitLibraries = licenser.getMitLibraries();
+        List<Library> gnuLibraries = licenser.getGnuLibraries();
+
+        findViewById(R.id.showDialog).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                licenserDialog.show();
+            }
+        });
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_github:
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/marcoscgdev/Licenser")));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+}
