@@ -77,10 +77,17 @@ Licenser licenser = new Licenser()
                 License.MIT));
 ```
 
-#### Custom functions
+And show it in a webview:
 
 ```java
-String licenses = licenser.getHTMLContent(); // Useful for showing it in a webview
+WebView webView = (WebView) findViewById(R.id.webView);
+webView.loadData(licenser.getHTMLContent(), "text/html; charset=UTF-8", null);
+```
+
+#### Extra functions
+
+```java
+String licenses = licenserDialog.getHTMLContent(); // HTML content
 List<Library> apacheLibraries = licenser.getApacheLibraries();
 List<Library> mitLibraries = licenser.getMitLibraries();
 List<Library> gnuLibraries = licenser.getGnuLibraries();
