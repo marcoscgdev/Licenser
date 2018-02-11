@@ -86,6 +86,8 @@ webView.loadData(licenser.getHTMLContent(), "text/html; charset=UTF-8", null);
 
 #### Extra functions
 
+You can access this functions with both classes
+
 ```java
 String licenses = licenserDialog.getHTMLContent(); // HTML content
 List<Library> apacheLibraries = licenser.getApacheLibraries();
