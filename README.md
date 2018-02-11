@@ -107,7 +107,7 @@ webView.loadData(licenser.getHTMLContent(), "text/html; charset=UTF-8", null);
 You can access this functions with both classes
 
 ```java
-String licenses = licenserDialog.getHTMLContent(); // HTML content
+String licenses = licenser.getHTMLContent(); // HTML content
 List<Library> apacheLibraries = licenser.getApacheLibraries();
 List<Library> mitLibraries = licenser.getMitLibraries();
 List<Library> gnuLibraries = licenser.getGnuLibraries();
