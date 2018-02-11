@@ -62,6 +62,18 @@ new LicenserDialog(this)
         .show();
 ```
 
+Library structure:
+
+```java
+Library lib1 = new Library(String title, String url, int licenseType);
+```
+
+LICENSE TYPES (At this moment):
+
+ - License.APACHE
+ - License.MIT
+ - License.GNU
+
 If you don't want a dialog, you can use the Licenser class:
 
 ```java
