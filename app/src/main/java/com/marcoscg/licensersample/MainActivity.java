@@ -11,10 +11,7 @@ import android.view.View;
 
 import com.marcoscg.licenser.Library;
 import com.marcoscg.licenser.License;
-import com.marcoscg.licenser.Licenser;
 import com.marcoscg.licenser.LicenserDialog;
-
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,22 +40,6 @@ public class MainActivity extends AppCompatActivity {
                         // TODO: 11/02/2018
                     }
                 });
-
-        Licenser licenser = new Licenser()
-                .setLibrary(new Library("Android Support Libraries",
-                        "https://developer.android.com/topic/libraries/support-library/index.html",
-                        License.APACHE))
-                .setLibrary(new Library("Example Library",
-                        "https://github.com/marcoscgdev",
-                        License.APACHE))
-                .setLibrary(new Library("Licenser",
-                        "https://github.com/marcoscgdev/Licenser",
-                        License.MIT));
-
-        String licenses = licenser.getHTMLContent();
-        List<Library> apacheLibraries = licenser.getApacheLibraries();
-        List<Library> mitLibraries = licenser.getMitLibraries();
-        List<Library> gnuLibraries = licenser.getGnuLibraries();
 
         findViewById(R.id.showDialog).setOnClickListener(new View.OnClickListener() {
             @Override
