@@ -125,7 +125,7 @@ List<Library> gnuLibraries = licenser.getGnuLibraries();
 ```
 The MIT License (MIT)
 
-Copyright (c) 2017 Marcos Calvo García
+Copyright (c) 2018 Marcos Calvo García
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
