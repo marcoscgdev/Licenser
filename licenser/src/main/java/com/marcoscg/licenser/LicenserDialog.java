@@ -120,7 +120,7 @@ public class LicenserDialog extends Licenser {
         return this;
     }
 
-    public LicenserDialog setCustomNoticeTitle(int noticeTitleRes) {
+    public LicenserDialog setCustomNoticeTitle(@StringRes int noticeTitleRes) {
         super.setCustomNoticeTitle(context.getResources().getString(noticeTitleRes));
         return this;
     }
