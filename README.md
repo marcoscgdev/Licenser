@@ -5,7 +5,7 @@ An android library to display the licenses of your application libraries in a ea
 
 ## Releases:
 
-#### Current release: 1.0.0.
+#### Current release: 1.0.1.
 
 You can see all the library releases [here](https://github.com/marcoscgdev/Licenser/releases).
 
@@ -36,7 +36,7 @@ allprojects {
 Now add the dependency to your app *build.gradle* file:
 
 ```groovy
-compile 'com.github.marcoscgdev:Licenser:1.0.0'
+compile 'com.github.marcoscgdev:Licenser:1.0.1'
 ```
 
 #### Step: 2 - creating a dialog
@@ -46,6 +46,7 @@ compile 'com.github.marcoscgdev:Licenser:1.0.0'
 ```java
 new LicenserDialog(this)
         .setTitle("Licenses")
+        .setCustomNoticeTitle("Notices for files:")
         .setLibrary(new Library("Android Support Libraries",
                 "https://developer.android.com/topic/libraries/support-library/index.html",
                 License.APACHE))
@@ -86,6 +87,7 @@ Library lib1 = new Library("Library name", "https://github.com/marcoscgdev", Lic
 
 ```java
 Licenser licenser = new Licenser()
+        .setCustomNoticeTitle("Notices for files:")
         .setLibrary(new Library("Android Support Libraries",
                 "https://developer.android.com/topic/libraries/support-library/index.html",
                 License.APACHE))
