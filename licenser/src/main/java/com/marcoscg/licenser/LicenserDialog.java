@@ -115,6 +115,16 @@ public class LicenserDialog extends Licenser {
         return this;
     }
 
+    public LicenserDialog setCustomNoticeTitle(String noticeTitle) {
+        super.setCustomNoticeTitle(noticeTitle);
+        return this;
+    }
+
+    public LicenserDialog setCustomNoticeTitle(int noticeTitleRes) {
+        super.setCustomNoticeTitle(context.getResources().getString(noticeTitleRes));
+        return this;
+    }
+
     public AlertDialog getAlertDialog() {
         return alertDialog;
     }

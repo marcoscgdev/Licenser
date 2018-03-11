@@ -16,6 +16,7 @@ public class Licenser {
     private List<Library> gnuLibraries;
 
     private StringBuilder stringBuilder;
+    private String noticeTitle = "Notices for files:";
     
     public Licenser() {
 
@@ -39,6 +40,11 @@ public class Licenser {
             mitLibraries.add(library);
         else if (library.getLicense()==License.GNU)
             gnuLibraries.add(library);
+        return this;
+    }
+
+    public Licenser setCustomNoticeTitle(String noticeTitle) {
+        this.noticeTitle = noticeTitle;
         return this;
     }
 
@@ -71,7 +77,7 @@ public class Licenser {
 
     private void prepare() {
         if (apacheLibraries.size()>0) {
-            stringBuilder.append("<h3>Notices for files:</h3>");
+            stringBuilder.append("<h3>"+noticeTitle+"</h3>");
             stringBuilder.append("<ul>");
             for (Library library:apacheLibraries) {
                 stringBuilder.append("<li><a href=\""+library.getUrl()+"\"><b>"+library.getTitle()+"</b></a></li>");

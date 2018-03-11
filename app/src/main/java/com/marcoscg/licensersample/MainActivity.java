@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         licenserDialog = new LicenserDialog(this)
                 .setTitle("Licenses")
                 .setCancelable(true)
+                .setCustomNoticeTitle("Notices for files:")
                 .setLibrary(new Library("Android Support Libraries",
                         "https://developer.android.com/topic/libraries/support-library/index.html",
                         License.APACHE))
