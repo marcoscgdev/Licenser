@@ -1,7 +1,7 @@
 # Licenser  [![API](https://img.shields.io/badge/API-14%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=14) 
 An android library to display the licenses of your application libraries in a easy way.
 
-Click [here](https://github.com/marcoscgdev/Licenser/blob/master/README_KOTLIN.md) for the Kotlin version of this readme.
+_Click [here](https://github.com/marcoscgdev/Licenser/blob/master/README_KOTLIN.md) for the Kotlin version of this readme._
 
 ---
 
