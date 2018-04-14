@@ -80,27 +80,36 @@ public class Licenser {
             stringBuilder.append("<h3>"+noticeTitle+"</h3>");
             stringBuilder.append("<ul>");
             for (Library library:apacheLibraries) {
-                stringBuilder.append("<li><a href=\""+library.getUrl()+"\"><b>"+library.getTitle()+"</b></a></li>");
+                if (library.getUrl() == null)
+                    stringBuilder.append("<li><b>"+library.getTitle()+"</b></li>");
+                else
+                    stringBuilder.append("<li><a href=\""+library.getUrl()+"\"><b>"+library.getTitle()+"</b></a></li>");
             }
             stringBuilder.append("</ul>");
             stringBuilder.append("<pre>"+License.getApacheLicense()+"</pre>");
         }
 
         if (mitLibraries.size()>0) {
-            stringBuilder.append("<h3>Notices for files:</h3>");
+            stringBuilder.append("<h3>"+noticeTitle+"</h3>");
             stringBuilder.append("<ul>");
             for (Library library:mitLibraries) {
-                stringBuilder.append("<li><a href=\""+library.getUrl()+"\"><b>"+library.getTitle()+"</b></a></li>");
+                if (library.getUrl() == null)
+                    stringBuilder.append("<li><b>"+library.getTitle()+"</b></li>");
+                else
+                    stringBuilder.append("<li><a href=\""+library.getUrl()+"\"><b>"+library.getTitle()+"</b></a></li>");
             }
             stringBuilder.append("</ul>");
             stringBuilder.append("<pre>"+License.getMITLicense()+"</pre>");
         }
 
         if (gnuLibraries.size()>0) {
-            stringBuilder.append("<h3>Notices for files:</h3>");
+            stringBuilder.append("<h3>"+noticeTitle+"</h3>");
             stringBuilder.append("<ul>");
             for (Library library:gnuLibraries) {
-                stringBuilder.append("<li><a href=\""+library.getUrl()+"\"><b>"+library.getTitle()+"</b></a></li>");
+                if (library.getUrl() == null)
+                    stringBuilder.append("<li><b>"+library.getTitle()+"</b></li>");
+                else
+                    stringBuilder.append("<li><a href=\""+library.getUrl()+"\"><b>"+library.getTitle()+"</b></a></li>");
             }
             stringBuilder.append("</ul>");
             stringBuilder.append("<pre>"+License.getGNULicense()+"</pre>");
