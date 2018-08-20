@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.support.annotation.StringRes;
+import android.support.annotation.StyleRes;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -26,13 +27,17 @@ public class LicenserDialog extends Licenser {
     private WebView webView;
 
     public LicenserDialog(Context context) {
+        this(context, 0);
+    }
+
+    public LicenserDialog(Context context, @StyleRes int dialogTheme) {
         Activity activity = (Activity) context;
-        if (activity==null)
+        if (activity == null)
             throw new NullPointerException("There is no activity attached to context");
         else if (activity instanceof AppCompatActivity) {
             this.context = context;
 
-            alertDialogBuilder = new AlertDialog.Builder(context);
+            alertDialogBuilder = new AlertDialog.Builder(context, dialogTheme);
             webView = new WebView(context);
             LinearLayout container = new LinearLayout(context);
 
@@ -77,6 +82,12 @@ public class LicenserDialog extends Licenser {
 
     public LicenserDialog setCancelable(boolean cancelable) {
         alertDialogBuilder.setCancelable(cancelable);
+        return this;
+    }
+
+    public LicenserDialog setBackgroundColor(int backgroundColor) {
+        super.setBackgroundColor(backgroundColor);
+
         return this;
     }
 
@@ -130,10 +141,10 @@ public class LicenserDialog extends Licenser {
     }
 
     public void show() {
-        if (webView.getUrl()==null)
+        if (webView.getUrl() == null)
             webView.loadData(getHTMLContent(context), "text/html; charset=UTF-8", null);
 
-        if (alertDialog==null)
+        if (alertDialog == null)
             alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }

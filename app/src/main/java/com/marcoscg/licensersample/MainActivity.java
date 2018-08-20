@@ -3,8 +3,9 @@ package com.marcoscg.licensersample;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,9 +23,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        licenserDialog = new LicenserDialog(this)
+        licenserDialog = new LicenserDialog(this, R.style.DialogStyle)
                 .setTitle("Licenses")
                 .setCancelable(true)
+                .setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary))
                 .setCustomNoticeTitle("Notices for files:")
                 .setLibrary(new Library("Android Support Libraries",
                         "https://developer.android.com/topic/libraries/support-library/index.html",

@@ -1,6 +1,7 @@
 package com.marcoscg.licenser;
 
 import android.content.Context;
+import android.graphics.Color;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,7 @@ public class Licenser {
 
     private StringBuilder stringBuilder;
     private String noticeTitle = "Notices for files:";
+    private int backgroundColor = -1;
     
     public Licenser() {
 
@@ -28,8 +30,8 @@ public class Licenser {
         stringBuilder.append("<html><head>");
         stringBuilder.append("<meta charset=\"utf-8\">\n");
         stringBuilder.append("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\">\n");
-        stringBuilder.append("<style>body{font-family:sans-serif;background-color:#fff;color:#000;margin:0;padding-left:8px;padding-right:8px;}a{color:#000;}li{margin:0 0 4px;}" +
-                "pre{background-color:#eee;color:#000;padding:1em;white-space:pre-wrap;margin: 0;}h3{margin-left: 16px;}ul{margin-top: -12px;}</style>\n");
+        stringBuilder.append("<style>body{font-family:sans-serif;margin:0;padding-left:8px;padding-right:8px;}li{margin:0 0 4px;}" +
+                "pre{padding:1em;white-space:pre-wrap;margin: 0;}h3{margin-left: 16px;}ul{margin-top: -12px;}</style>\n");
         stringBuilder.append("</head><body>");
     }
 
@@ -54,12 +56,25 @@ public class Licenser {
         return stringBuilder.toString();
     }
 
+    public Licenser setBackgroundColor(int backgroundColor) {
+        this.backgroundColor = backgroundColor;
+        return this;
+    }
+
     String getHTMLContent(Context context) {
-        int color = Utils.getThemeColor(context, R.attr.colorBackgroundFloating);
-        if (!Utils.isColorLight(color)) {
-            stringBuilder.append("<style>body{background-color:"+Utils.colorHex(color)+";color:#fff;}" +
-                    "a{color:#fff;}pre{background-color:#303030;color:#fff;}</style>");
+        if (backgroundColor==-1)
+            backgroundColor = Utils.getThemeColor(context, R.attr.colorBackgroundFloating);
+
+        int preColor = Utils.darkenColor(backgroundColor);
+        int textColor = Color.BLACK;
+
+        if (!Utils.isColorLight(backgroundColor)) {
+            preColor = Utils.lightenColor(backgroundColor);
+            textColor = Color.WHITE;
         }
+
+        stringBuilder.append("<style>body{background-color:"+Utils.colorHex(backgroundColor)+";color:"+Utils.colorHex(textColor)+";}" +
+                "a{color:"+Utils.colorHex(textColor)+";}pre{background-color:"+Utils.colorHex(preColor)+";color:"+Utils.colorHex(textColor)+";}</style>");
         return getHTMLContent();
     }
 
