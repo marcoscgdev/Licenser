@@ -38,7 +38,7 @@ allprojects {
 Now add the dependency to your app *build.gradle* file:
 
 ```groovy
-compile 'com.github.marcoscgdev:Licenser:1.0.3'
+implementation 'com.github.marcoscgdev:Licenser:1.0.3'
 ```
 
 #### Step: 2 - creating a dialog
