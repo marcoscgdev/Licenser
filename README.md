@@ -7,7 +7,7 @@ _Click [here](https://github.com/marcoscgdev/Licenser/blob/master/README_KOTLIN.
 
 ## Releases:
 
-#### Current release: 1.0.2.
+#### Current release: 1.0.3.
 
 You can see all the library releases [here](https://github.com/marcoscgdev/Licenser/releases).
 
@@ -38,7 +38,7 @@ allprojects {
 Now add the dependency to your app *build.gradle* file:
 
 ```groovy
-compile 'com.github.marcoscgdev:Licenser:1.0.2'
+compile 'com.github.marcoscgdev:Licenser:1.0.3'
 ```
 
 #### Step: 2 - creating a dialog
@@ -49,6 +49,7 @@ compile 'com.github.marcoscgdev:Licenser:1.0.2'
 new LicenserDialog(this)
         .setTitle("Licenses")
         .setCustomNoticeTitle("Notices for files:")
+        .setBackgroundColor(Color.RED) // Optional
         .setLibrary(new Library("Android Support Libraries",
                 "https://developer.android.com/topic/libraries/support-library/index.html",
                 License.APACHE))
@@ -65,6 +66,13 @@ new LicenserDialog(this)
             }
         })
         .show();
+```
+
+**NEW:** You can set a custom AlertDialog theme.
+
+```
+new LicenserDialog(this, R.style.DialogStyle)
+        ...
 ```
 
 Library structure:
