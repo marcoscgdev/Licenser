@@ -86,6 +86,7 @@ LICENSE TYPES (At this moment):
  - License.APACHE
  - License.MIT
  - License.GNU
+ - License.CREATIVE_COMMONS
  ```
  
  ```java
