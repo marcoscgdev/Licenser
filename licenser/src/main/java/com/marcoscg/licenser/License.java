@@ -9,6 +9,7 @@ public class License {
     public static int APACHE = 1;
     public static int MIT = 2;
     public static int GNU = 3;
+    public static int CREATIVE_COMMONS = 4;
 
     static String getApacheLicense() {
         return "Licensed under the Apache License, Version 2.0 (the \"License\").<br>" +
@@ -62,6 +63,24 @@ public class License {
                 "<br>" +
                 "You should have received a copy of the GNU General Public License<br>" +
                 "along with this program.  If not, see <http://www.gnu.org/licenses/>.";
+    }
+
+    static String getCreativeCommonsLicense() {
+        return "Licensed under a Creative Commons 3.0 License.<br>" +
+                "<br>" +
+                "You must give appropriate credit, provide a link to the license, and indicate " +
+                "if changes were made. You may do so in any reasonable manner, but not in any way " +
+                "that suggests the licensor endorses you or your use.<br>" +
+                "<br>" +
+                "No additional restrictions — You may not apply legal terms or technological measures " +
+                "that legally restrict others from doing anything the license permits." +
+                "You do not have to comply with the license for elements of the material in" +
+                " the public domain or where your use is permitted by an applicable exception or limitation.<br>" +
+                "<br>" +
+                "No warranties are given. The license may not give you all of the permissions necessary " +
+                "for your intended use. For example, other rights such as publicity, privacy, or moral " +
+                "rights may limit how you use the material." +
+                "<br><br>For more info visit https://creativecommons.org/licenses/.";
     }
 
 }

@@ -15,6 +15,7 @@ public class Licenser {
     private List<Library> apacheLibraries;
     private List<Library> mitLibraries;
     private List<Library> gnuLibraries;
+    private List<Library> creativeCommonsLibraries;
 
     private StringBuilder stringBuilder;
     private String noticeTitle = "Notices for files:";
@@ -25,6 +26,7 @@ public class Licenser {
         apacheLibraries = new ArrayList<>();
         mitLibraries = new ArrayList<>();
         gnuLibraries = new ArrayList<>();
+        creativeCommonsLibraries = new ArrayList<>();
         stringBuilder = new StringBuilder();
 
         stringBuilder.append("<html><head>");
@@ -42,6 +44,8 @@ public class Licenser {
             mitLibraries.add(library);
         else if (library.getLicense()==License.GNU)
             gnuLibraries.add(library);
+        else if (library.getLicense()==License.CREATIVE_COMMONS)
+            creativeCommonsLibraries.add(library);
         return this;
     }
 
@@ -128,6 +132,19 @@ public class Licenser {
             }
             stringBuilder.append("</ul>");
             stringBuilder.append("<pre>"+License.getGNULicense()+"</pre>");
+        }
+
+        if (creativeCommonsLibraries.size()>0) {
+            stringBuilder.append("<h3>"+noticeTitle+"</h3>");
+            stringBuilder.append("<ul>");
+            for (Library library:creativeCommonsLibraries) {
+                if (library.getUrl() == null)
+                    stringBuilder.append("<li><b>"+library.getTitle()+"</b></li>");
+                else
+                    stringBuilder.append("<li><a href=\""+library.getUrl()+"\"><b>"+library.getTitle()+"</b></a></li>");
+            }
+            stringBuilder.append("</ul>");
+            stringBuilder.append("<pre>"+License.getCreativeCommonsLicense()+"</pre>");
         }
     }
     
