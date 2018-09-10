@@ -7,7 +7,7 @@ _Click [here](https://github.com/marcoscgdev/Licenser/blob/master/README_KOTLIN.
 
 ## Releases:
 
-#### Current release: 1.0.3.
+#### Current release: 1.0.4.
 
 You can see all the library releases [here](https://github.com/marcoscgdev/Licenser/releases).
 
@@ -38,7 +38,7 @@ allprojects {
 Now add the dependency to your app *build.gradle* file:
 
 ```groovy
-implementation 'com.github.marcoscgdev:Licenser:1.0.3'
+implementation 'com.github.marcoscgdev:Licenser:1.0.4'
 ```
 
 #### Step: 2 - creating a dialog
@@ -87,6 +87,7 @@ LICENSE TYPES (At this moment):
  - License.APACHE
  - License.MIT
  - License.GNU
+ - License.CREATIVE_COMMONS
  ```
  
  ```java
