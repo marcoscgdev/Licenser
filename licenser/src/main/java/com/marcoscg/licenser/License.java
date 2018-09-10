@@ -10,6 +10,8 @@ public class License {
     public static int MIT = 2;
     public static int GNU = 3;
     public static int CREATIVE_COMMONS = 4;
+    public static int ISC = 5;
+    public static int NTP = 6;
 
     static String getApacheLicense() {
         return "Licensed under the Apache License, Version 2.0 (the \"License\").<br>" +
@@ -81,6 +83,34 @@ public class License {
                 "for your intended use. For example, other rights such as publicity, privacy, or moral " +
                 "rights may limit how you use the material." +
                 "<br><br>For more info visit https://creativecommons.org/licenses/.";
+    }
+
+    static String getISCLicense() {
+        return "Licensed under the ISC License (ISC).<br>" +
+                "<br>" +
+                "Permission to use, copy, modify, and/or distribute this software for any purpose " +
+                "with or without fee is hereby granted, provided that the above copyright notice " +
+                "and this permission notice appear in all copies.<br>" +
+                "<br>" +
+                "THE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH " +
+                "REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND " +
+                "FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, " +
+                "OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA " +
+                "OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, " +
+                "ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.";
+    }
+
+    static String getNTPLicense() {
+        return "Licensed under the NTP License (NTP).<br>" +
+                "<br>" +
+                "Permission to use, copy, modify, and distribute this software and its documentation " +
+                "for any purpose with or without fee is hereby granted, provided that the above " +
+                "copyright notice appears in all copies and that both the copyright notice and this " +
+                "permission notice appear in supporting documentation, and that the name (TrademarkedName) " +
+                "not be used in advertising or publicity pertaining to distribution of the software without " +
+                "specific, written prior permission. (TrademarkedName) makes no representations about the " +
+                "suitability this software for any purpose. It is provided \"as is\" " +
+                "without express or implied warranty.";
     }
 
 }

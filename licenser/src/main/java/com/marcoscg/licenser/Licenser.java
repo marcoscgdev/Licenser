@@ -16,6 +16,8 @@ public class Licenser {
     private List<Library> mitLibraries;
     private List<Library> gnuLibraries;
     private List<Library> creativeCommonsLibraries;
+    private List<Library> iscLibraries;
+    private List<Library> ntpLibraries;
 
     private StringBuilder stringBuilder;
     private String noticeTitle = "Notices for files:";
@@ -27,6 +29,8 @@ public class Licenser {
         mitLibraries = new ArrayList<>();
         gnuLibraries = new ArrayList<>();
         creativeCommonsLibraries = new ArrayList<>();
+        iscLibraries = new ArrayList<>();
+        ntpLibraries = new ArrayList<>();
         stringBuilder = new StringBuilder();
 
         stringBuilder.append("<html><head>");
@@ -46,6 +50,10 @@ public class Licenser {
             gnuLibraries.add(library);
         else if (library.getLicense()==License.CREATIVE_COMMONS)
             creativeCommonsLibraries.add(library);
+        else if (library.getLicense()==License.ISC)
+            iscLibraries.add(library);
+        else if (library.getLicense()==License.NTP)
+            ntpLibraries.add(library);
         return this;
     }
 
@@ -92,6 +100,18 @@ public class Licenser {
 
     public List<Library> getGnuLibraries() {
         return gnuLibraries;
+    }
+
+    public List<Library> getCreativeCommonsLibraries() {
+        return creativeCommonsLibraries;
+    }
+
+    public List<Library> getIscLibraries() {
+        return iscLibraries;
+    }
+
+    public List<Library> getNtpLibraries() {
+        return ntpLibraries;
     }
 
     private void prepare() {
@@ -145,6 +165,32 @@ public class Licenser {
             }
             stringBuilder.append("</ul>");
             stringBuilder.append("<pre>"+License.getCreativeCommonsLicense()+"</pre>");
+        }
+
+        if (iscLibraries.size()>0) {
+            stringBuilder.append("<h3>"+noticeTitle+"</h3>");
+            stringBuilder.append("<ul>");
+            for (Library library:iscLibraries) {
+                if (library.getUrl() == null)
+                    stringBuilder.append("<li><b>"+library.getTitle()+"</b></li>");
+                else
+                    stringBuilder.append("<li><a href=\""+library.getUrl()+"\"><b>"+library.getTitle()+"</b></a></li>");
+            }
+            stringBuilder.append("</ul>");
+            stringBuilder.append("<pre>"+License.getISCLicense()+"</pre>");
+        }
+
+        if (ntpLibraries.size()>0) {
+            stringBuilder.append("<h3>"+noticeTitle+"</h3>");
+            stringBuilder.append("<ul>");
+            for (Library library:ntpLibraries) {
+                if (library.getUrl() == null)
+                    stringBuilder.append("<li><b>"+library.getTitle()+"</b></li>");
+                else
+                    stringBuilder.append("<li><a href=\""+library.getUrl()+"\"><b>"+library.getTitle()+"</b></a></li>");
+            }
+            stringBuilder.append("</ul>");
+            stringBuilder.append("<pre>"+License.getNTPLicense()+"</pre>");
         }
     }
     
