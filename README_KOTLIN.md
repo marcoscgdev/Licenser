@@ -7,7 +7,7 @@ _Click [here](https://github.com/marcoscgdev/Licenser/blob/master/README.md) for
 
 ## Releases:
 
-#### Current release: 1.0.4.
+#### Current release: 1.0.5.
 
 You can see all the library releases [here](https://github.com/marcoscgdev/Licenser/releases).
 
@@ -38,7 +38,7 @@ allprojects {
 Now add the dependency to your app *build.gradle* file:
 
 ```groovy
-implementation 'com.github.marcoscgdev:Licenser:1.0.4'
+implementation 'com.github.marcoscgdev:Licenser:1.0.5'
 ```
 
 #### Step: 2 - creating a dialog
