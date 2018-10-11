@@ -87,6 +87,8 @@ LICENSE TYPES (At this moment):
  - License.MIT
  - License.GNU
  - License.CREATIVE_COMMONS
+ - License.ISC
+ - License.NTP
  ```
  
  ```java
