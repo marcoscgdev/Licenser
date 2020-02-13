@@ -2,6 +2,7 @@ package com.marcoscg.licenser;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.util.Base64;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,7 +66,7 @@ public class Licenser {
     public String getHTMLContent() {
         prepare();
         stringBuilder.append("</body></html>");
-        return stringBuilder.toString();
+        return Base64.encodeToString(stringBuilder.toString().getBytes(), Base64.NO_PADDING);
     }
 
     public Licenser setBackgroundColor(int backgroundColor) {

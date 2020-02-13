@@ -142,7 +142,7 @@ public class LicenserDialog extends Licenser {
 
     public void show() {
         if (webView.getUrl() == null)
-            webView.loadData(getHTMLContent(context), "text/html; charset=UTF-8", null);
+            webView.loadData(getHTMLContent(context), "text/html; charset=UTF-8", "base64");
 
         if (alertDialog == null)
             alertDialog = alertDialogBuilder.create();
