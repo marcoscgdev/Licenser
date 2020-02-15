@@ -10,6 +10,8 @@ import androidx.annotation.StringRes;
 import androidx.annotation.StyleRes;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.util.Base64;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -141,11 +143,14 @@ public class LicenserDialog extends Licenser {
     }
 
     public void show() {
-        if (webView.getUrl() == null)
-            webView.loadData(getHTMLContent(context), "text/html; charset=UTF-8", "base64");
+        if (webView.getUrl() == null) {
+            webView.loadData(Base64.encodeToString(getDialogHTMLContent(context).getBytes(), Base64.NO_PADDING),
+                    "text/html; charset=UTF-8", "base64");
+        }
 
         if (alertDialog == null)
             alertDialog = alertDialogBuilder.create();
+
         alertDialog.show();
     }
 

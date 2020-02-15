@@ -30,13 +30,16 @@ public class MainActivity extends AppCompatActivity {
                 .setCustomNoticeTitle("Notices for files:")
                 .setLibrary(new Library("Android Support Libraries",
                         "https://developer.android.com/topic/libraries/support-library/index.html",
-                        License.APACHE))
+                        License.APACHE2)) // APACHE has been changed to APACHE2
                 .setLibrary(new Library("Example Library",
                         "https://github.com/marcoscgdev",
-                        License.APACHE))
+                        License.APACHE2))
                 .setLibrary(new Library("Licenser",
                         "https://github.com/marcoscgdev/Licenser",
                         License.MIT))
+                .setLibrary(new Library("Android Support Libraries",
+                        "https://developer.android.com/topic/libraries/support-library/index.html",
+                        License.APACHE1)) // APACHE has been changed to APACHE2
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
