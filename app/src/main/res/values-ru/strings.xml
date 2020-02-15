@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="view_on_github">Взгляд на Github</string>
+    <string name="show_dialog">Показ диалог</string>
+</resources>
