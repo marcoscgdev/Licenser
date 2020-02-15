@@ -7,15 +7,19 @@ _Click [here](https://github.com/marcoscgdev/Licenser/blob/master/README.md) for
 
 ## Releases:
 
-#### Current release: 1.0.5.
+#### Current release: 1.0.6.
 
 You can see all the library releases [here](https://github.com/marcoscgdev/Licenser/releases).
 
 ---
 
+## Wiki
+
+You can access Licenser wiki [here](https://github.com/marcoscgdev/Licenser/wiki).
+
 ## Demo:
 
-You can download the **sample apk** [here](https://github.com/marcoscgdev/Licenser/releases/download/1.0.0/app-debug.apk).
+You can download the **sample apk** [here](https://github.com/marcoscgdev/Licenser/releases/download/1.0.6/app-debug.apk).
 
 <img src="https://raw.githubusercontent.com/marcoscgdev/Licenser/master/device-2018-02-11-161003.png" width="350">
 
@@ -38,7 +42,7 @@ allprojects {
 Now add the dependency to your app *build.gradle* file:
 
 ```groovy
-implementation 'com.github.marcoscgdev:Licenser:1.0.5'
+implementation 'com.github.marcoscgdev:Licenser:1.0.6'
 ```
 
 #### Step: 2 - creating a dialog
@@ -52,10 +56,10 @@ LicenserDialog(this)
         .setBackgroundColor(Color.RED) // Optional
         .setLibrary(Library("Android Support Libraries",
                 "https://developer.android.com/topic/libraries/support-library/index.html",
-                License.APACHE))
+                License.APACHE2)) // APACHE deprecated, see wiki
         .setLibrary(Library("Example Library",
                 "https://github.com/marcoscgdev",
-                License.APACHE))
+                License.APACHE2)) // APACHE deprecated, see wiki
         .setLibrary(Library("Licenser",
                 "https://github.com/marcoscgdev/Licenser",
                 License.MIT))
@@ -83,12 +87,20 @@ var lib1 = Library(String title, String url, int licenseType)
 LICENSE TYPES (At this moment):
 
 ```java
- - License.APACHE
- - License.MIT
- - License.GNU
- - License.CREATIVE_COMMONS
- - License.ISC
- - License.NTP
+ - License.APACHE1 // Apache v1
+ - License.APACHE1_1 // Apache v1.1
+ - License.APACHE2 // Apache v2
+ - License.BSD3 // BSD v3
+ - License.BSD4 // BSD v4
+ - License.BSL // BSL
+ - License.CREATIVE_COMMONS // Creative commons
+ - License.FREEBSD // FreeBSD
+ - License.GNU2 // GNU v2
+ - License.GNU2_1 // GNU v2.1
+ - License.GNU3 // GNU v3
+ - License.ISC // ISC
+ - License.MIT // MIT
+ - License.NTP // NTP
  ```
  
  ```java
