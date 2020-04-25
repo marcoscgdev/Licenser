@@ -1,52 +1,12 @@
-package com.marcoscg.licenser;
+package com.marcoscg.licenser
 
 /**
  * Created by @MarcosCGdev on 11/02/2018.
  */
+internal object LicenseContent {
 
-public class License {
-
-    /**
-     *
-     * @deprecated Use {@link License#APACHE2} instead.
-     */
-    @Deprecated
-    public static final int APACHE = 1;
-
-    public static final int MIT = 2;
-
-    /**
-     *
-     * @deprecated Use {@link License#GNU3} instead.
-     */
-    @Deprecated
-    public static final int GNU = 3;
-
-    public static final int CREATIVE_COMMONS = 4;
-    public static final int ISC = 5;
-    public static final int NTP = 6;
-    public static final int APACHE2 = 7;
-    public static final int APACHE1 = 8;
-    public static final int APACHE1_1 = 9;
-    public static final int BSD3 = 10;
-    public static final int BSD4 = 11;
-    public static final int FREEBSD = 12;
-    public static final int BSL = 13;
-    public static final int GNU2 = 14;
-
-    /**
-     *
-     * @deprecated Use {@link License#LGPL2_1} instead.
-     */
-    @Deprecated
-    public static final int GNU2_1 = 15;
-
-    public static final int GNU3 = 16;
-    public static final int LGPL2_1 = 17;
-    public static final int LGPL3 = 18;
-
-    static String getApache2License() {
-        return "Licensed under the Apache License, Version 2.0 (the \"License\").<br>" +
+    val apache2License: String
+        get() = "Licensed under the Apache License, Version 2.0 (the \"License\").<br>" +
                 "<br>" +
                 "You may not use this file except in compliance with the License. " +
                 "You may obtain a copy of the License at<br>" +
@@ -58,11 +18,10 @@ public class License {
                 "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>" +
                 "<br>" +
                 "See the License for the specific language governing permissions and " +
-                "limitations under the License.";
-    }
+                "limitations under the License."
 
-    static String getMITLicense() {
-        return "Licensed under the MIT License (MIT).<br>" +
+    val mITLicense: String
+        get() = "Licensed under the MIT License (MIT).<br>" +
                 "<br>" +
                 "Permission is hereby granted, free of charge, to any person obtaining a copy " +
                 "of this software and associated documentation files (the \"Software\"), to deal " +
@@ -80,11 +39,10 @@ public class License {
                 "AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER " +
                 "LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, " +
                 "OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE " +
-                "SOFTWARE.";
-    }
+                "SOFTWARE."
 
-    static String getGNU3License() {
-        return "Licensed under the GNU General Public License, Version 3.0.<br>" +
+    val gNU3License: String
+        get() = "Licensed under the GNU General Public License, Version 3.0.<br>" +
                 "<br>" +
                 "This program is free software: you can redistribute it and/or modify " +
                 "it under the terms of the GNU General Public License as published by " +
@@ -97,11 +55,10 @@ public class License {
                 "GNU General Public License for more details.<br>" +
                 "<br>" +
                 "You should have received a copy of the GNU General Public License " +
-                "along with this program.  If not, see <http://www.gnu.org/licenses/>.";
-    }
+                "along with this program.  If not, see <http://www.gnu.org/licenses/>."
 
-    static String getCreativeCommonsLicense() {
-        return "Licensed under a Creative Commons 3.0 License.<br>" +
+    val creativeCommonsLicense: String
+        get() = "Licensed under a Creative Commons 3.0 License.<br>" +
                 "<br>" +
                 "You must give appropriate credit, provide a link to the license, and indicate " +
                 "if changes were made. You may do so in any reasonable manner, but not in any way " +
@@ -116,11 +73,10 @@ public class License {
                 "for your intended use. For example, other rights such as publicity, privacy, or moral " +
                 "rights may limit how you use the material.<br>" +
                 "<br>" +
-                "For more info visit https://creativecommons.org/licenses/.";
-    }
+                "For more info visit https://creativecommons.org/licenses/."
 
-    static String getISCLicense() {
-        return "Licensed under the ISC License (ISC).<br>" +
+    val iSCLicense: String
+        get() = "Licensed under the ISC License (ISC).<br>" +
                 "<br>" +
                 "Permission to use, copy, modify, and/or distribute this software for any purpose " +
                 "with or without fee is hereby granted, provided that the above copyright notice " +
@@ -131,11 +87,10 @@ public class License {
                 "FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, " +
                 "OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA " +
                 "OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, " +
-                "ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.";
-    }
+                "ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE."
 
-    static String getNTPLicense() {
-        return "Licensed under the NTP License (NTP).<br>" +
+    val nTPLicense: String
+        get() = "Licensed under the NTP License (NTP).<br>" +
                 "<br>" +
                 "Permission to use, copy, modify, and distribute this software and its documentation " +
                 "for any purpose with or without fee is hereby granted, provided that the above " +
@@ -144,11 +99,10 @@ public class License {
                 "not be used in advertising or publicity pertaining to distribution of the software without " +
                 "specific, written prior permission. (TrademarkedName) makes no representations about the " +
                 "suitability this software for any purpose. It is provided \"as is\" " +
-                "without express or implied warranty.";
-    }
+                "without express or implied warranty."
 
-    static String getApache1License() {
-        return "The Apache Software License, Version 1.0" +
+    val apache1License: String
+        get() = "The Apache Software License, Version 1.0" +
                 "<br>" +
                 "Copyright (c) 1995-1999 The Apache Group. All rights reserved.<br>" +
                 "<br>" +
@@ -201,11 +155,10 @@ public class License {
                 "on public domain software written at the National Center for " +
                 "Supercomputing Applications, University of Illinois, Urbana-Champaign. " +
                 "For more information on the Apache Group and the Apache HTTP server " +
-                "project, please see <http://www.apache.org/>.";
-    }
+                "project, please see <http://www.apache.org/>."
 
-    static String getApache11License() {
-        return "The Apache Software License, Version 1.1" +
+    val apache11License: String
+        get() = "The Apache Software License, Version 1.1" +
                 "<br>" +
                 "Copyright (c) 2000 The Apache Software Foundation.  All rights " +
                 "reserved.<br>" +
@@ -250,7 +203,7 @@ public class License {
                 "OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT " +
                 "OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF " +
                 "SUCH DAMAGE.<br>" +
-                "<br>"+
+                "<br>" +
                 "This software consists of voluntary contributions made by many " +
                 "individuals on behalf of the Apache Software Foundation. For more " +
                 "information on the Apache Software Foundation, please see " +
@@ -258,11 +211,10 @@ public class License {
                 "<br>" +
                 "Portions of this software are based upon public domain software " +
                 "originally written at the National Center for Supercomputing Applications, " +
-                "University of Illinois, Urbana-Champaign.";
-    }
+                "University of Illinois, Urbana-Champaign."
 
-    static String getGNU2License() {
-        return "Licensed under the GNU General Public License, Version 2.0<br>" +
+    val gNU2License: String
+        get() = "Licensed under the GNU General Public License, Version 2.0<br>" +
                 "<br>" +
                 "This program is free software; you can redistribute it and/or " +
                 "modify it under the terms of the GNU General Public License " +
@@ -276,11 +228,10 @@ public class License {
                 "<br>" +
                 "You should have received a copy of the GNU General Public License " +
                 "along with this program; if not, write to the Free Software " +
-                "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.";
-    }
+                "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 
-    static String getLGPL2_1License() {
-        return "Licensed under the GNU Lesser General Public License, Version 2.1<br>" +
+    val lGPL2_1License: String
+        get() = "Licensed under the GNU Lesser General Public License, Version 2.1<br>" +
                 "<br>" +
                 "This library is free software; you can redistribute it and/or " +
                 "modify it under the terms of the GNU Lesser General Public " +
@@ -294,11 +245,10 @@ public class License {
                 "<br>" +
                 "You should have received a copy of the GNU Lesser General Public " +
                 "License along with this library; if not, write to the Free Software " +
-                "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.";
-    }
+                "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA."
 
-    static String getBSLLicense() {
-        return "Boost Software License - Version 1.0<br>" +
+    val bSLLicense: String
+        get() = "Boost Software License - Version 1.0<br>" +
                 "<br>" +
                 "Permission is hereby granted, free of charge, to any person or organization " +
                 "obtaining a copy of the software and accompanying documentation covered by " +
@@ -320,11 +270,10 @@ public class License {
                 "SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE " +
                 "FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE, " +
                 "ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER " +
-                "DEALINGS IN THE SOFTWARE.";
-    }
+                "DEALINGS IN THE SOFTWARE."
 
-    static String getFreeBSDLicense() {
-        return "The FreeBSD Copyright" +
+    val freeBSDLicense: String
+        get() = "The FreeBSD Copyright" +
                 "<br>" +
                 "Copyright 1992-2012 The FreeBSD Project. All rights reserved.<br>" +
                 "<br>" +
@@ -352,11 +301,10 @@ public class License {
                 "<br>" +
                 "The views and conclusions contained in the software and documentation " +
                 "are those of the authors and should not be interpreted as representing " +
-                "official policies, either expressed or implied, of the FreeBSD Project.";
-    }
+                "official policies, either expressed or implied, of the FreeBSD Project."
 
-    static String getBSD3License() {
-        return "The BSD 3-Clause License<br>" +
+    val bSD3License: String
+        get() = "The BSD 3-Clause License<br>" +
                 "<br>" +
                 "Redistribution and use in source and binary forms, with or without " +
                 "modification, are permitted provided that the following conditions are " +
@@ -384,11 +332,10 @@ public class License {
                 "HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, " +
                 "STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING " +
                 "IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE " +
-                "POSSIBILITY OF SUCH DAMAGE. ";
-    }
+                "POSSIBILITY OF SUCH DAMAGE. "
 
-    static String getBSD4License() {
-        return "The BSD 4-Clause License<br>" +
+    val bSD4License: String
+        get() = "The BSD 4-Clause License<br>" +
                 "<br>" +
                 "Redistribution and use in source and binary forms, with or without " +
                 "modification, are permitted provided that the following conditions are " +
@@ -420,11 +367,10 @@ public class License {
                 "BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, " +
                 "WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE " +
                 "OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN " +
-                "IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.";
-    }
+                "IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
 
-    static String getLGPL3License() {
-        return "Licensed under the GNU Lesser General Public License, Version 3.0<br>" +
+    val lGPL3License: String
+        get() = "Licensed under the GNU Lesser General Public License, Version 3.0<br>" +
                 "<br>" +
                 "This library is free software; you can redistribute it and/or " +
                 "modify it under the terms of the GNU Lesser General Public " +
@@ -438,7 +384,5 @@ public class License {
                 "<br>" +
                 "You should have received a copy of the GNU Lesser General Public " +
                 "License along with this library; if not, write to the Free Software " +
-                "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.";
-    }
-
+                "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA."
 }

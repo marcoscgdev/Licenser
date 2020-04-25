@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Android Projects-Licenser.iml" filepath="$PROJECT_DIR$/Android Projects-Licenser.iml" group="Licenser" />
-      <module fileurl="file://$PROJECT_DIR$/Licenser.iml" filepath="$PROJECT_DIR$/Licenser.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/Licenser-app.iml" filepath="$PROJECT_DIR$/app/Licenser-app.iml" group="Licenser/app" />
-      <module fileurl="file://$PROJECT_DIR$/licenser/Licenser-licenser.iml" filepath="$PROJECT_DIR$/licenser/Licenser-licenser.iml" group="Licenser/licenser" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/licenser/licenser.iml" filepath="$PROJECT_DIR$/licenser/licenser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Licenser.iml" filepath="$PROJECT_DIR$/Licenser.iml" group="Licenser" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Licenser/app" />
+      <module fileurl="file://$PROJECT_DIR$/licenser/licenser.iml" filepath="$PROJECT_DIR$/licenser/licenser.iml" group="Licenser/licenser" />
     </modules>
   </component>
 </project>
