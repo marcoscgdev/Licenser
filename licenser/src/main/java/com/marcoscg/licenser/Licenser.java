@@ -26,7 +26,8 @@ public class Licenser {
     private List<Library> freeBsdLibraries;
     private List<Library> bslLibraries;
     private List<Library> gnu2Libraries;
-    private List<Library> gnu2_1Libraries;
+    private List<Library> lgpl2_1Libraries;
+    private List<Library> lgpl3Libraries;
 
     private StringBuilder stringBuilder;
     private String noticeTitle = "Notices for files:";
@@ -46,7 +47,8 @@ public class Licenser {
         freeBsdLibraries = new ArrayList<>();
         bslLibraries = new ArrayList<>();
         gnu2Libraries = new ArrayList<>();
-        gnu2_1Libraries = new ArrayList<>();
+        lgpl2_1Libraries = new ArrayList<>();
+        lgpl3Libraries = new ArrayList<>();
 
         stringBuilder = new StringBuilder();
     }
@@ -83,7 +85,8 @@ public class Licenser {
                 gnu2Libraries.add(library);
                 break;
             case License.GNU2_1:
-                gnu2_1Libraries.add(library);
+            case License.LGPL2_1:
+                lgpl2_1Libraries.add(library);
                 break;
             case License.BSD3:
                 bsd3Libraries.add(library);
@@ -96,6 +99,9 @@ public class Licenser {
                 break;
             case License.FREEBSD:
                 freeBsdLibraries.add(library);
+                break;
+            case License.LGPL3:
+                lgpl3Libraries.add(library);
                 break;
         }
 
@@ -209,8 +215,12 @@ public class Licenser {
         return gnu2Libraries;
     }
 
-    public List<Library> getGnu2_1Libraries() {
-        return gnu2_1Libraries;
+    public List<Library> getLgpl2_1Libraries() {
+        return lgpl2_1Libraries;
+    }
+
+    public List<Library> getLgpl3Libraries() {
+        return lgpl3Libraries;
     }
 
     private void addLicenses() {
@@ -223,9 +233,10 @@ public class Licenser {
         addLicenseLibraries(creativeCommonsLibraries, License.getCreativeCommonsLicense());
         addLicenseLibraries(freeBsdLibraries, License.getFreeBSDLicense());
         addLicenseLibraries(gnu2Libraries, License.getGNU2License());
-        addLicenseLibraries(gnu2_1Libraries, License.getGNU2_1License());
         addLicenseLibraries(gnu3Libraries, License.getGNU3License());
         addLicenseLibraries(iscLibraries, License.getISCLicense());
+        addLicenseLibraries(lgpl2_1Libraries, License.getLGPL2_1License());
+        addLicenseLibraries(lgpl3Libraries, License.getLGPL3License());
         addLicenseLibraries(mitLibraries, License.getMITLicense());
         addLicenseLibraries(ntpLibraries, License.getNTPLicense());
     }

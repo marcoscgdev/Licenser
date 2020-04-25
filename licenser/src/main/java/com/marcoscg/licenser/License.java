@@ -33,8 +33,17 @@ public class License {
     public static final int FREEBSD = 12;
     public static final int BSL = 13;
     public static final int GNU2 = 14;
+
+    /**
+     *
+     * @deprecated Use {@link License#LGPL2_1} instead.
+     */
+    @Deprecated
     public static final int GNU2_1 = 15;
+
     public static final int GNU3 = 16;
+    public static final int LGPL2_1 = 17;
+    public static final int LGPL3 = 18;
 
     static String getApache2License() {
         return "Licensed under the Apache License, Version 2.0 (the \"License\").<br>" +
@@ -139,7 +148,9 @@ public class License {
     }
 
     static String getApache1License() {
-        return "Copyright (c) 1995-1999 The Apache Group. All rights reserved.<br>" +
+        return "The Apache Software License, Version 1.0" +
+                "<br>" +
+                "Copyright (c) 1995-1999 The Apache Group. All rights reserved.<br>" +
                 "<br>" +
                 "Redistribution and use in source and binary forms, with or without " +
                 "modification, are permitted provided that the following conditions " +
@@ -268,8 +279,8 @@ public class License {
                 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.";
     }
 
-    static String getGNU2_1License() {
-        return "Licensed under the GNU General Public License, Version 2.1<br>" +
+    static String getLGPL2_1License() {
+        return "Licensed under the GNU Lesser General Public License, Version 2.1<br>" +
                 "<br>" +
                 "This library is free software; you can redistribute it and/or " +
                 "modify it under the terms of the GNU Lesser General Public " +
@@ -410,6 +421,24 @@ public class License {
                 "WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE " +
                 "OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN " +
                 "IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.";
+    }
+
+    static String getLGPL3License() {
+        return "Licensed under the GNU Lesser General Public License, Version 3.0<br>" +
+                "<br>" +
+                "This library is free software; you can redistribute it and/or " +
+                "modify it under the terms of the GNU Lesser General Public " +
+                "License as published by the Free Software Foundation; either " +
+                "version 3 of the License, or (at your option) any later version.<br>" +
+                "<br>" +
+                "This library is distributed in the hope that it will be useful, " +
+                "but WITHOUT ANY WARRANTY; without even the implied warranty of " +
+                "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU " +
+                "Lesser General Public License for more details.<br>" +
+                "<br>" +
+                "You should have received a copy of the GNU Lesser General Public " +
+                "License along with this library; if not, write to the Free Software " +
+                "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA.";
     }
 
 }
