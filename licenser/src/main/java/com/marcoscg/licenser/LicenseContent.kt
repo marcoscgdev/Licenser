@@ -157,7 +157,7 @@ internal object LicenseContent {
                 "For more information on the Apache Group and the Apache HTTP server " +
                 "project, please see <http://www.apache.org/>."
 
-    val apache11License: String
+    val apache1_1License: String
         get() = "The Apache Software License, Version 1.1" +
                 "<br>" +
                 "Copyright (c) 2000 The Apache Software Foundation.  All rights " +

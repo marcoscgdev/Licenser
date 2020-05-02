@@ -21,6 +21,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val customLicenseHtmlContent = "Licensed under the Custom License, V.3" +
+                "<br><br>LICENSE DESCRIPTION HERE<br>REMEMBER TO USE HTML TAGS!"
+
         licenserDialog = LicenserDialog(this, R.style.DialogStyle)
                 .setTitle("Licenses")
                 .setCancelable(true)
@@ -28,16 +31,21 @@ class MainActivity : AppCompatActivity() {
                 .setCustomNoticeTitle("Notices for files:")
                 .setLibrary(Library("Android Support Libraries",
                         null,
-                        License.APACHE2)) // APACHE has been changed to APACHE2, see wiki
+                        License.APACHE2))
                 .setLibrary(Library("Example Library",
                         "https://github.com/marcoscgdev",
-                        License.APACHE2)) // APACHE has been changed to APACHE2, see wiki
+                        License.APACHE2))
                 .setLibrary(Library("Licenser",
                         "https://github.com/marcoscgdev/Licenser",
                         License.MIT))
+                .setLibrary(Library("Custom library",
+                        null,
+                        License("CUSTOM_LIC", customLicenseHtmlContent))) // use license code like APACHE2 or MIT
                 .setPositiveButton(android.R.string.ok, DialogInterface.OnClickListener { dialogInterface, i ->
                     // TODO: 11/02/2018
                 })
+
+        //val apache2Libraries = licenserDialog?.apache2Libraries
 
         bt_show_dialog.setOnClickListener {
             licenserDialog?.show()
