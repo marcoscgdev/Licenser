@@ -20,7 +20,7 @@ open class Licenser {
     private var noticeTitle = "Notices for files:"
     private var backgroundColor = -1
 
-    open fun setLibrary(library: Library): Licenser? {
+    fun setLibrary(library: Library): Licenser? {
         if (libraries.containsKey(library.license).not()) {
             libraries[library.license] = ArrayList()
         }
@@ -30,17 +30,17 @@ open class Licenser {
         return this
     }
 
-    open fun setCustomNoticeTitle(noticeTitle: String): Licenser? {
+    fun setCustomNoticeTitle(noticeTitle: String): Licenser? {
         this.noticeTitle = noticeTitle
         return this
     }
 
-    open fun setBackgroundColor(backgroundColor: Int): Licenser? {
+    fun setBackgroundColor(backgroundColor: Int): Licenser? {
         this.backgroundColor = backgroundColor
         return this
     }
 
-    val hTMLContent: String
+    val htmlContent: String
         get() {
             startDocument()
             addLicenses()
@@ -48,7 +48,64 @@ open class Licenser {
             return stringBuilder.toString()
         }
 
-    fun getDialogHTMLContent(context: Context?): String {
+    val apache2Libraries: MutableList<Library>?
+        get() = libraries[License.APACHE2]
+
+    val mitLibraries: MutableList<Library>?
+        get() = libraries[License.MIT]
+
+    val gnu3Libraries: MutableList<Library>?
+        get() = libraries[License.GNU3]
+
+    val creativeCommonsLibraries: MutableList<Library>?
+        get() = libraries[License.CREATIVE_COMMONS]
+
+    val iscLibraries: MutableList<Library>?
+        get() = libraries[License.ISC]
+
+    val ntpLibraries: MutableList<Library>?
+        get() = libraries[License.NTP]
+
+    val apache1Libraries: MutableList<Library>?
+        get() = libraries[License.APACHE1]
+
+    val apache1_1Libraries: MutableList<Library>?
+        get() = libraries[License.APACHE1_1]
+
+    val bsd3Libraries: MutableList<Library>?
+        get() = libraries[License.BSD3]
+
+    val bsd4Libraries: MutableList<Library>?
+        get() = libraries[License.BSD4]
+
+    val freeBsdLibraries: MutableList<Library>?
+        get() = libraries[License.FREEBSD]
+
+    val bslLibraries: MutableList<Library>?
+        get() = libraries[License.BSL]
+
+    val gnu2Libraries: MutableList<Library>?
+        get() = libraries[License.GNU2]
+
+    val lgpl2_1Libraries: MutableList<Library>?
+        get() = libraries[License.LGPL2_1]
+
+    val lgpl3Libraries: MutableList<Library>?
+        get() = libraries[License.LGPL3]
+
+    val ofl1_1Libraries: MutableList<Library>?
+        get() = libraries[License.OFL1_1]
+
+    val mpl1Libraries: MutableList<Library>?
+        get() = libraries[License.MPL1]
+
+    val mpl1_1Libraries: MutableList<Library>?
+        get() = libraries[License.MPL1_1]
+
+    val mpl2Libraries: MutableList<Library>?
+        get() = libraries[License.MPL2]
+
+    protected fun getDialogHTMLContent(context: Context?): String {
         if (backgroundColor == -1) backgroundColor = getThemeColor(context!!, R.attr.colorBackgroundFloating)
         var preColor = darkenColor(backgroundColor)
         var textColor = Color.BLACK
@@ -64,63 +121,6 @@ open class Licenser {
 
         return stringBuilder.toString()
     }
-
-    open val apache2Libraries: MutableList<Library>?
-        get() = libraries[License.APACHE2]
-
-    open val mitLibraries: MutableList<Library>?
-        get() = libraries[License.MIT]
-
-    open val gnu3Libraries: MutableList<Library>?
-        get() = libraries[License.GNU3]
-
-    open val creativeCommonsLibraries: MutableList<Library>?
-        get() = libraries[License.CREATIVE_COMMONS]
-
-    open val iscLibraries: MutableList<Library>?
-        get() = libraries[License.ISC]
-
-    open val ntpLibraries: MutableList<Library>?
-        get() = libraries[License.NTP]
-
-    open val apache1Libraries: MutableList<Library>?
-        get() = libraries[License.APACHE1]
-
-    open val apache1_1Libraries: MutableList<Library>?
-        get() = libraries[License.APACHE1_1]
-
-    open val bsd3Libraries: MutableList<Library>?
-        get() = libraries[License.BSD3]
-
-    open val bsd4Libraries: MutableList<Library>?
-        get() = libraries[License.BSD4]
-
-    open val freeBsdLibraries: MutableList<Library>?
-        get() = libraries[License.FREEBSD]
-
-    open val bslLibraries: MutableList<Library>?
-        get() = libraries[License.BSL]
-
-    open val gnu2Libraries: MutableList<Library>?
-        get() = libraries[License.GNU2]
-
-    open val lgpl2_1Libraries: MutableList<Library>?
-        get() = libraries[License.LGPL2_1]
-
-    open val lgpl3Libraries: MutableList<Library>?
-        get() = libraries[License.LGPL3]
-
-    open val ofl1_1Libraries: MutableList<Library>?
-        get() = libraries[License.OFL1_1]
-
-    open val mpl1Libraries: MutableList<Library>?
-        get() = libraries[License.MPL1]
-
-    open val mpl1_1Libraries: MutableList<Library>?
-        get() = libraries[License.MPL1_1]
-
-    open val mpl2Libraries: MutableList<Library>?
-        get() = libraries[License.MPL2]
 
     private fun addLicenses() {
         for (lib in libraries.toSortedMap(compareBy { it.code })) {

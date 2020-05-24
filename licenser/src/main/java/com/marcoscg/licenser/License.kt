@@ -20,7 +20,7 @@ import com.marcoscg.licenser.LicenseContent.mPL2License
 import com.marcoscg.licenser.LicenseContent.nTPLicense
 import com.marcoscg.licenser.LicenseContent.oFL1_1License
 
-data class License(val code: String, val htmlContent: String) {
+data class License(val code: String, var htmlContent: String) {
 
     companion object {
         val APACHE1 = License("APACHE1", apache1License)
