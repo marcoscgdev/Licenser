@@ -20,7 +20,7 @@ open class Licenser {
     private var noticeTitle = "Notices for files:"
     private var backgroundColor = -1
 
-    fun setLibrary(library: Library): Licenser? {
+    open fun setLibrary(library: Library): Licenser? {
         if (libraries.containsKey(library.license).not()) {
             libraries[library.license] = ArrayList()
         }
@@ -30,12 +30,12 @@ open class Licenser {
         return this
     }
 
-    fun setCustomNoticeTitle(noticeTitle: String): Licenser? {
+    open fun setCustomNoticeTitle(noticeTitle: String): Licenser? {
         this.noticeTitle = noticeTitle
         return this
     }
 
-    fun setBackgroundColor(backgroundColor: Int): Licenser? {
+    open fun setBackgroundColor(backgroundColor: Int): Licenser? {
         this.backgroundColor = backgroundColor
         return this
     }
