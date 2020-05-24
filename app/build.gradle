@@ -8,8 +8,8 @@ android {
         applicationId "com.marcoscg.licensersample"
         minSdkVersion 14
         targetSdkVersion 29
-        versionCode 107
-        versionName "1.0.7"
+        versionCode 200
+        versionName "2.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
