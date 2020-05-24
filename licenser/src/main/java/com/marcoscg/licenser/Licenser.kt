@@ -110,6 +110,18 @@ open class Licenser {
     open val lgpl3Libraries: MutableList<Library>?
         get() = libraries[License.LGPL3]
 
+    open val ofl1_1Libraries: MutableList<Library>?
+        get() = libraries[License.OFL1_1]
+
+    open val mpl1Libraries: MutableList<Library>?
+        get() = libraries[License.MPL1]
+
+    open val mpl1_1Libraries: MutableList<Library>?
+        get() = libraries[License.MPL1_1]
+
+    open val mpl2Libraries: MutableList<Library>?
+        get() = libraries[License.MPL2]
+
     private fun addLicenses() {
         for (lib in libraries.toSortedMap(compareBy { it.code })) {
             addLicenseLibraries(lib.key, lib.value)

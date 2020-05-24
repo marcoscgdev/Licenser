@@ -385,4 +385,40 @@ internal object LicenseContent {
                 "You should have received a copy of the GNU Lesser General Public " +
                 "License along with this library; if not, write to the Free Software " +
                 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA."
+
+    val oFL1_1License: String
+        get() = "Licensed under the SIL Open Font License, Version 1.1<br>" +
+                "<br>" +
+                "THE FONT SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, " +
+                "EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF " +
+                "MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT " +
+                "OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE " +
+                "COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, " +
+                "INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL " +
+                "DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING " +
+                "FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM " +
+                "OTHER DEALINGS IN THE FONT SOFTWARE."
+
+    val mPL1License: String
+        get() = "The contents of this file are subject to the Mozilla Public License " +
+                "Version 1.0 (the \"License\"); you may not use this file except in compliance " +
+                "with the License. You may obtain a copy of the License at http://www.mozilla.org/MPL/<br>" +
+                "<br>" +
+                "Software distributed under the License is distributed on an \"AS IS\" basis, " +
+                "WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License " +
+                "for the specific language governing rights and limitations under the License."
+
+    val mPL1_1License: String
+        get() = "The contents of this file are subject to the Mozilla Public License " +
+                "Version 1.1 (the \"License\"); you may not use this file except in compliance " +
+                "with the License. You may obtain a copy of the License at http://www.mozilla.org/MPL/<br>" +
+                "<br>" +
+                "Software distributed under the License is distributed on an \"AS IS\" basis, " +
+                "WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License " +
+                "for the specific language governing rights and limitations under the License."
+
+    val mPL2License: String
+        get() = "This Source Code Form is subject to the terms of the Mozilla Public License, " +
+                "v. 2.0. If a copy of the MPL was not distributed with this file, You can " +
+                "obtain one at https://mozilla.org/MPL/2.0/."
 }

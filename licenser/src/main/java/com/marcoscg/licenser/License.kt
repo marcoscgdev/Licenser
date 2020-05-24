@@ -14,7 +14,11 @@ import com.marcoscg.licenser.LicenseContent.iSCLicense
 import com.marcoscg.licenser.LicenseContent.lGPL2_1License
 import com.marcoscg.licenser.LicenseContent.lGPL3License
 import com.marcoscg.licenser.LicenseContent.mITLicense
+import com.marcoscg.licenser.LicenseContent.mPL1License
+import com.marcoscg.licenser.LicenseContent.mPL1_1License
+import com.marcoscg.licenser.LicenseContent.mPL2License
 import com.marcoscg.licenser.LicenseContent.nTPLicense
+import com.marcoscg.licenser.LicenseContent.oFL1_1License
 
 data class License(val code: String, val htmlContent: String) {
 
@@ -33,7 +37,11 @@ data class License(val code: String, val htmlContent: String) {
         val LGPL2_1 = License("LGPL2_1", lGPL2_1License)
         val LGPL3 = License("LGPL3", lGPL3License)
         val MIT = License("MIT", mITLicense)
+        val MPL1 = License("MPL1", mPL1License)
+        val MPL1_1 = License("MPL1_1", mPL1_1License)
+        val MPL2 = License("MPL2", mPL2License)
         val NTP = License("NTP", nTPLicense)
+        val OFL1_1 = License("OFL1_1", oFL1_1License)
     }
 
     override fun toString(): String {
