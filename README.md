@@ -19,7 +19,7 @@ You can access Licenser wiki [here](https://github.com/marcoscgdev/Licenser/wiki
 
 ## Demo:
 
-You can download the **sample apk** [here](https://github.com/marcoscgdev/Licenser/releases/download/1.0.6/app-debug.apk).
+You can download the **sample apk** [here](https://github.com/marcoscgdev/Licenser/releases/download/2.0.0/app-debug.apk).
 
 <img src="https://raw.githubusercontent.com/marcoscgdev/Licenser/master/device-2018-02-11-161003.png" width="350">
 
@@ -118,9 +118,9 @@ LICENSE TYPES (At this moment):
 Please, if you need a license that is not yet in this list, try to create a custom license.
  
  ```java
-val lib1 = Library("Library name", "https://github.com/marcoscgdev", License.APACHE)
-
 val lic1 = License("CUSTOM_LICENSE_CODE", customLicenseHtmlContent)
+
+val lib1 = Library("Library name", "https://github.com/marcoscgdev", lic1)
  ```
 
 **If you don't want a dialog, you can use the Licenser class:**
